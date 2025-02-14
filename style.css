@@ -54,6 +54,8 @@ body {
     display: flex;
     gap: 1.5rem;
     margin-left: 890px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
   }
   
   .navbar li a {
@@ -279,34 +281,56 @@ body {
     color: #fc8181;
 }
 
+.stock-table tr:hover {
+  background-color: #2f2f4f;
+}
+
+
 @media (max-width: 1174px) {
   body {
       font-size: 14px;
+      padding: 1rem;
   }
   
   .navbar {
-      margin-left: 0;
-      display: none;
-      gap: 1rem;
-      position: absolute;
-      flex-direction: column;
-      align-items: center;
-      top: 60px;
-      right: 0;
-      width: 100%;
-      padding: 1rem 0;
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    top: 70px;
+    right: 25px;
+    width: 125px;
+    padding: 1rem 2rem;
+    background: rgba(30, 30, 47, 0.95);
+    z-index: 99;
+    margin-left: 15px;
+    text-align: center;
+    border-radius: 15px;
   }
 
   #menu-toggle:checked + .menu-icon + .navbar {
     display: flex;
   }
 
+  
+
   .navbar li {
-      margin: 1rem 0;
+   margin: 1rem ;
+    text-align: centre;
   }
   
   .menu-icon{
     display: block;
+    position: absolute;  
+    top: 20px;          
+    right: 20px;       
+    font-size: 2rem;
+    color: #f4f4f9;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .menu-icon:hover{
+    color:#e8c547;
   }
 
   .hero h1 {
@@ -337,17 +361,26 @@ body {
   }
 
   .stock-card, .overview-item {
-      width: 100%;
+      width: 90%;
   }
   
   .stock-grid {
       flex-direction: column;
       align-items: center;
+      gap: 1.5rem;
   }
 
   .overview-grid{
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .trending-stocks{
+    margin-left: 18px;
+  }
+
+  .overview-card1{
+    flex-direction: column;
   }
 }
 
